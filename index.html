@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manuplation Practice</title>
+</head>
+
+<body>
+
+    <p>DOM Manuplation</p>
+    <ul id="element_ID" data="valid">
+        <li id="1" class="listItems">First Element</li>
+        <li id="2" class="listItems">Second Element</li>
+        <li id="3" class="listItems">Third Element</li>
+    </ul>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table>
+
+    <script>
+        /**Root Node*/
+        // console.log(document.documentElement);
+        /*For Access Head*/
+        // console.log(document.head);
+        /*For Access Body*/
+        // console.log(document.body);
+
+        /*For Access Children From Element */
+        /*Return ChildNodes With Space*/
+        // console.log(document.body.childNodes);
+        /*Return only ChildNodes*/
+
+        // for (const node of document.body.children) {
+        //     console.log(node);
+        // }
+        // console.log(document.body.firstElementChild);
+        // console.log(document.body.lastElementChild);
+
+        /*Convert into Array*/
+        // const array_node = Array.from(document.body.children)
+        // console.log(array_node[1]);
+
+        // const ulTag = document.body.children[1]
+        // console.log(ulTag.nextElementSibling);
+
+        // const firstLi = ulTag.children[0]
+        // const secondLi = ulTag.children[1]
+        // console.log(firstLi)
+        // console.log(secondLi.previousElementSibling.textContent);
+
+        /*Selecting Table tags (td,tr,th)*/
+        // const tableTag = document.body.children[2]
+        // console.log(tableTag.tBodies[0].rows[1].cells[1].style = "background-color:blue;");
+        // console.log(document.body.children[0].style = "color:brown;");
+        // element_ID.style.background = "red"
+        // console.log();
+
+        const element_by_Id = document.getElementById('element_ID')
+        element_by_Id.style.background = 'yellow'
+
+        // console.log(document.getElementsByTagName('table'))
+        const itemsId = document.querySelector('#element_ID');
+        const items  =document.querySelectorAll('ul > li:last-child')
+        // console.log(items[0].textContent);
+        // console.log(itemsId);
+            console.log(element_ID.getAttribute('data')) /*For Access User Defind Tags Attributes*/
+    </script>
+</body>
+
+</html>
