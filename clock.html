@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-        }
         body {
             height: 100vh;
-            background-color: rgb(236, 88, 35);
+            background-color: coral;
             justify-content: center;
             align-items: center;
             display: flex;
@@ -23,29 +18,19 @@
             color: white;
             font-size: 200px;
             font-family: Poppins, sans-serif;
+            border-bottom: 7px solid white;
         }
-        #date {
-            color: white;
-            font-size: 50px;
-            font-family: Poppins, sans-serif;
-        }
-
     </style>
 </head>
 
 <body>
     <p id="time"></p>
-    <br>
-    <p id="date"></p>
 </body>
 <script>
     const time = document.getElementById('time')
-    const date = document.getElementById('date')
     function timer() {
         const current_time = new Date().toLocaleTimeString()
-        const current_date = new Date().toDateString()
         time.innerText = current_time
-        date.innerText = current_date
     }
     setInterval(() => {
         timer()
